@@ -1,0 +1,10 @@
+P=3.202e4
+Vin=299;
+fs=10e3;
+Vout=479;
+Ioutmax=P/Vout;
+delIL=0.01*Ioutmax*(Vout/Vin);
+delvout=0.01*Vout;
+L=(Vin*(Vout-Vin))/(delIL*fs*Vout)
+C=(Ioutmax*(1-(Vin/Vout)))/(fs*delvout)
+R=Vout/Ioutmax
